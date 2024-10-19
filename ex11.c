@@ -83,6 +83,9 @@
 #include <stdlib.h> /* Miscellaneous functions (rand, malloc, srand)*/
 #include <getopt.h> /* get options from system argc/argv */
 #include "exN.h" /* To be created for this template if needed */
+#include <stdio.h>
+#include <string.h>
+
 
 
 /* ------------------------------------------------------------------------- */
@@ -156,9 +159,45 @@ int main(int argc, char *argv[])
 
     /* ...and we are done */
     /* Write your code here... */
+#include <stdio.h>
+#include <string.h>
 
-    return EXIT_SUCCESS;
+    char objeto[20];
+    char verbo[20];
+
+    printf("Bem-vindo ao jogo de Halloween! Você está em uma mansão assombrada e há um assassino querendo te matar. Você terá que escolher uma resposta entre duas opções; se escolher errado, morrerá. Se escolher certo, você chegará ao fim!\n\n");
+
+    printf("Você está na mansão, e para se defender, você tem duas opções: escolha entre (faca ou garfo):\n");
+    scanf("%s", objeto);
+
+    if (strcmp(objeto, "faca") == 0) {
+        printf("Você escolheu a faca. Você pega a faca para se defender e pode continuar o jogo.\n");
+    } else if (strcmp(objeto, "garfo") == 0) {
+        printf("Você escolheu o garfo. Tentou se defender e morreu. Tente novamente.\n");
+        return 0;  // Encerra o programa
+    } else {
+        printf("Opção inválida. Tente novamente.\n");
+        return 1;  // Encerra o programa com erro
+    }
+
+    printf("Você está a um passo de acabar. Vamos decidir o que irá fazer: você (correr ou matar) o assassino?\n");
+    scanf("%s", verbo);
+
+    if (strcmp(verbo, "matar") == 0) {
+        printf("Você escolheu matar. Você consegue matar o assassino. Parabéns, você ganhou!!!!\n");
+    } else if (strcmp(verbo, "correr") == 0) {
+        printf("Você escolheu correr e o assassino pegou você. Você morreu.\n");
+        return 0;  // Encerra o programa
+    } else {
+        printf("Ação inválida. Tente novamente.\n");
+        return 1;  // Encerra o programa com erro
+    }
+
+    return 0;  // Encerrando o programa com sucesso
 }
+
+
+
 
 /* Write your functions here... */
 
