@@ -83,31 +83,16 @@
 #include <stdlib.h> /* Miscellaneous functions (rand, malloc, srand)*/
 #include <getopt.h> /* get options from system argc/argv */
 #include "exN.h" /* To be created for this template if needed */
+#include <stdio.h>
+#include <string.h>
 
-/* #include <time.h> */ /* Time and date functions */
-/* #include <math.h> */ /* Mathematics functions */
-/* #include <string.h> */ /* Strings functions definitions */
-/* #include <dlfcn.h> */ /* Dynamic library */
-/* #include <malloc.h> */ /* Dynamic memory allocation */
-/* #include <unistd.h> */ /* UNIX standard function */
-/* #include <limits.h> */ /* Various C limits */
-/* #include <ctype.h> */ /* Character functions */
-/* #include <errno.h> */ /* Error number codes errno */
-/* #include <signal.h> */ /* Signal processing */
-/* #include <stdarg.h> */ /* Functions with variable arguments */
-/* #include <pthread.h> */ /* Parallel programming with threads */
-/* #include <fcntl.h> */ /* File control definitions */
-/* #include <termios.h> */ /* Terminal I/O definitions POSIX */
-/* #include <sys/stat.h> */ /* File status and information */
-/* #include <float.h> */ /* Float constants to help portability */
-/* #include <setjmp.h> */ /* Bypass standard function calls and return */
-/* #include <stddef.h> */ /* Various types and MACROS */
-/* #include <SWI-Prolog.h> */ /* Prolog integration with C */
-/* #include <ncurses.h> */ /* Screen handling and optimisation functions */
-/* #include <allegro.h> */ /* A game library for graphics, sounds, etc. */
-/* #include <libintl.h> */ /* Internationalization / translation */
-/* #include <locale.h> */ /* MACROS LC_ for location specific settings */
-/* #include "libeco.h" */ /* I/O, Math, Sound, Color, Portable Linux/Windows */
+int main() {
+
+char objeto[20];
+char verbo[20];
+
+printf(";Bem-vindo ao jogo de Halloween! Você está em uma mansão assombrada e há um assassino querendo te matar. Você terá que escolher uma resposta entre duas opções; se escolher errado, morrerá. Se escolher certo, você chegará ao fim!\n");
+
 
 /* ------------------------------------------------------------------------- */
 /**
