@@ -100,13 +100,12 @@ char verbo[20];
      }
         else if (strcmp(objeto, "garfo") == 0) {
     printf("Você escolheu o garfo. Tentou se defender e morreu. Tente novamente.\n");
- return 0; // Encerra o programa
-     } else {
+ return 0;
+        }
+        else {
     printf("Opção inválida. Tente novamente.\n");
- return 1; // Encerra o programa com erro
- }
-printf("Você está a um passo de acabar. Vamos decidir o que irá fazer: você (correr ou matar) o assassino?\n");
- scanf("%s", verbo);
+ return 1;
+     }
 
 
 /* ------------------------------------------------------------------------- */
