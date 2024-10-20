@@ -33,101 +33,63 @@
 /* ---------------------------------------------------------------------- */
 /* algoritmo */
 
-algoritmo exemplo;
+algoritmo Jogo_advtxt;
 
 /* ---------------------------------------------------------------------- */
 /* variáveis */
 
 variáveis
-	idade : inteiro;
-	salario, r : real;
-	escolha : caractere;
-	nome : literal;
-	resultado : lógico;
-	tabuleiro : matriz[3][3] de inteiros;
-	i, j : inteiro;
+
+	verbo : literal;
+    objeto : literal;
+
 fim-variáveis
 
 /* ---------------------------------------------------------------------- */
 /* rotina principal */
 
 início
-	imprima("Qual o seu nome? ");
-	nome := leia();
 
-	imprima(nome, ", digite sua idade: ");
-	idade := leia();
+    imprima("Bem-vindo ao jogo de Halloween! Você está em uma mansão assombrada e há um assassino querendo te matar. Você terá que escolher uma resposta entre duas opções; se escolher errado, morrerá. Se escolher certo, você chegará ao fim!\n");
 
-	se idade >= 18 então
-		se idade < 60 então
-			imprima("adulto, liberado!");
-		senão
-			imprima("idoso, vaga especial.");
-		fim-se
-	senão
-		imprima("menor de idade, entrada recusada!");
-		retorne 0; 
-	fim-se
+    imprima("Você está na mansão, e para se defender, você tem duas opções: escolha (faca ou garfo):\n");
 
-	imprima("Quer continuar? (s/n)");
-	escolha := leia();
-	se escolha = 'n' ou escolha = 'N' então
-		retorne 0; 
-	fim-se
+    objeto := leia();
 
-	imprima("Qual o seu salário?");
-	salario := leia();
-	salario := salario + salario * 1.5;
-	imprima("Seu novo salário após o aumento: ", salario);
+    se objeto = "faca" então
 
-	resultado := verdadeiro;
-	imprima("Calculando descontos...");
-	enquanto resultado = verdadeiro faça
-		salario := salario * 0.9;
-		imprima("Novo salário: ", salario);
-		resultado := (salario > 100.1);
-	fim-enquanto
+        imprima("Você escolheu a faca. Você pega a faca para se defender e pode continuar o jogo.\n");
 
-	imprima("Agora vou calcular a raiz quadrada de 9 para você:");
-	r := raiz(9);
-	imprima("A raiz de 9 é: ", r);
+        verbo := leia();
 
-    /* preenchendo a matriz tabuleiro */
-    imprima("Preenchendo tabuleiro");
-    para i de 0 até 2 faça
-        para j de 0 até 2 faça
-            tabuleiro[i][j] := i + j;
-        fim-para
-    fim-para
+        se verbo = "matar" então
 
-    /* imprimindo o tabuleiro */
-    imprime_matriz(tabuleiro);
+            imprima("Você escolheu matar. Você consegue matar o assassino. Parabéns, você ganhou!!!!!\n");
 
-fim
+        senão
+
+            imprima("Você escolheu correr e o assassino pegou você. Você morreu.\n");
+
+        fim-se
+
+    senão se objeto = "garfo" então
+
+        imprima("Você escolheu o garfo. Tentou se defender e morreu. Tente novamente.\n");
+
+    senão
+        imprima("Opção inválida. Tente novamente.\n");
+        fim-se
+        fim-se
+        fim
 
 /* ---------------------------------------------------------------------- */
 /* funções de usuário */
 
 /* ---------------------------------------------------------------------- */
-/* Encontra a raiz usando o método Newton-Raphson */
-função raiz(num: real) : real
-  xn : real;
-início
-    xn := 3.0;
-    retorne xn;
-fim
+/*
 
 /* ---------------------------------------------------------------------- */
-/* Imprime matriz */
-função imprime_matriz(tabuleiro : matriz[3][3] de inteiros)
-	i, j : inteiro;
-início
-    para i de 0 até 2 faça
-        para j de 0 até 2 faça
-            imprima("tabuleiro posição ",i,",",j," é ", tabuleiro[i][j]);
-        fim-para
-    fim-para
-fim
+
 
 /* ---------------------------------------------------------------------- */
 /* rodapé de configuração do vim                                          */
