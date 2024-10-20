@@ -49,39 +49,27 @@ fim-variáveis
 /* rotina principal */
 
 início
-
     imprima("Bem-vindo ao jogo de Halloween! Você está em uma mansão assombrada e há um assassino querendo te matar. Você terá que escolher uma resposta entre duas opções; se escolher errado, morrerá. Se escolher certo, você chegará ao fim!\n");
-
     imprima("Você está na mansão, e para se defender, você tem duas opções: escolha (faca ou garfo):\n");
-
     objeto := leia();
 
     se objeto = "faca" então
-
         imprima("Você escolheu a faca. Você pega a faca para se defender e pode continuar o jogo.\n");
-
+        imprima("Você está a um passo de acabar. Vamos decidir o que irá fazer: você correr ou matar o assassino?\n");
         verbo := leia();
 
         se verbo = "matar" então
-
             imprima("Você escolheu matar. Você consegue matar o assassino. Parabéns, você ganhou!!!!!\n");
-
         senão
-
             imprima("Você escolheu correr e o assassino pegou você. Você morreu.\n");
-
         fim-se
 
     senão se objeto = "garfo" então
-
         imprima("Você escolheu o garfo. Tentou se defender e morreu. Tente novamente.\n");
-
     senão
         imprima("Opção inválida. Tente novamente.\n");
-        fim-se
-        fim-se
-        fim
-
+    fim-se
+fim
 /* ---------------------------------------------------------------------- */
 /* funções de usuário */
 
