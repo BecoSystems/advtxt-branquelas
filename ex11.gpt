@@ -69,6 +69,7 @@ início
     senão
         imprima("Opção inválida. Tente novamente.\n");
     fim-se
+    fim-se
 fim
 /* ---------------------------------------------------------------------- */
 /* funções de usuário */
