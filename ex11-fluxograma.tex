@@ -107,14 +107,13 @@ o programa será implementado na Linguagem de Programação \texttt{C}
 
 % Descrever melhor seu projeto aqui
 
-Este programa faz isso, isso e \texttt{também em fonte mono-espaçada faz isso}.
-
-O programa será modelado em \textit{fluxograma} em uma primeira fase, em seguida
-sua lógica será desenvolvida em formato de \textit{algoritmo}, para então
-na terceira fase ser implementado em Linguagem de Programação \texttt{C}.
-
-Exemplo de letra em \textit{itálico é com textit}, e em \textbf{bold face é com textbf} e \texttt{tal tal tal é mono-espaçada type-writer}.
-
+O jogo de Halloween, tem como cenário uma mansão assombrada onde há um assassino
+querendo lhe matar, e você tem sempre duas opções para se proteger onde uma você
+continuará viva e outra você morrerá, na primeira opção temos o objeto que terá que
+escolher entre faca ou garfo, onde na escolha da faca você sobreviverá e no garfo
+morrerá, você só responde a segunda pergunta se responder a primeira corretamente, e a
+última pergunta é o verbo onde tem o verbo correr ou matar, onde o verbo corretor é
+matar e você vence a partida
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seção de objetivos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fluxograma}
@@ -152,6 +151,37 @@ Exemplo de letra em \textit{itálico é com textit}, e em \textbf{bold face é c
 
 % adicionar aqui o algoritmo (opcional)
 
+algoritmo Jogo_advtxt;
+variáveis
+    verbo : literal;
+    objeto : literal;
+fim-variáveis
+
+início
+    imprima("Bem-vindo ao jogo de Halloween! Você está em uma mansão assombrada e há um assassino querendo te matar. Você terá que escolher uma resposta entre duas opções; se escolher errado, morrerá. Se escolher certo, você chegará ao fim!\n");
+    imprima("Você está na mansão, e para se defender, você tem duas opções: escolha (faca ou garfo):\n");
+    objeto := leia();
+
+    se objeto = "faca" então
+        imprima("Você escolheu a faca. Você pega a faca para se defender e pode continuar o jogo.\n");
+        imprima("Você está a um passo de acabar. Vamos decidir o que irá fazer: você correr ou matar o assassino?\n");
+        verbo := leia();
+
+        se verbo = "matar" então
+            imprima("Você escolheu matar. Você consegue matar o assassino. Parabéns, você ganhou!!!!!\n");
+        senão
+            imprima("Você escolheu correr e o assassino pegou você. Você morreu.\n");
+        fim-se
+
+    senão se objeto = "garfo" então
+        imprima("Você escolheu o garfo. Tentou se defender e morreu. Tente novamente.\n");
+    senão
+        imprima("Opção inválida. Tente novamente.\n");
+    fim-se
+    fim-se
+fim
+
+
 
 % \clearpage % inicia próxima seção em nova página
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,64 +193,34 @@ Exemplo de letra em \textit{itálico é com textit}, e em \textbf{bold face é c
 \subsection*{Discentes}
 
 \begin{enumerate}
-    \item \textbf{Nome Completo:} Fulano de Tal Um
+    \item \textbf{Nome Completo:} Giovana Mel ivo de Oliveira. AUTOR 1
     \begin{description}
-        \item [Email:] \email{blabla@poli.br}
-        \item [Endereço:]
-        \item [Matrícula:]
-        \item [CPF:]
-        \item [RG:]
-        \item [Telefone:]
-        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
-    \end{description}
+        \item [Email:] \email{gmio@poli.br}
+        \item [Endereço: Rua Manoel Pessoa de Luna filho, 73, Prado]
+        \item [Matrícula:300889892]
+        \item [CPF: 120.307.334-82]
+        \item [RG:10.303.015]
+        \item [Telefone:(81) 9 9983-2287]
+        \end{description}
 
-    \item \textbf{Nome Completo:} Fulano de Qual Dois
-    \begin{description}
-        \item [Email:] \email{blabla@poli.br}
-        \item [Endereço:]
-        \item [Matrícula:]
-        \item [CPF:]
-        \item [RG:]
-        \item [Telefone:]
-        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
-    \end{description}
+    \item \textbf{Nome Completo:} Victor Emanuel de Souza Silva Ramos. AUTOR 2
+        \begin{description}
+        \item [Email:] \email{vessr@poli.br}
+        \item [Endereço:: Rua Fausto Cardoso, 59, Madalena]
+        \item [Matrícula:300884225]
+        \item [CPF:147.269.684-08]
+        \item [RG:10.658.232]
+        \item [Telefone: (81) 9 8275-9092]
+        \end{description}
 
-    \item \textbf{Nome Completo:} Fulano de Como Três
-    \begin{description}
-        \item [Email:] \email{blabla@poli.br}
-        \item [Endereço:]
-        \item [Matrícula:]
-        \item [CPF:]
-        \item [RG:]
-        \item [Telefone:]
-        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
-    \end{description}
+    \item \textbf{Nome Completo:} Marcelo Douglas Rodrigues. AUTOR 3
+        \begin{description}
+        \item [Email:] \email{mdr@poli.br}
+        \item [Endereço:: Ouro Preto - Olinda]
+        \item [Telefone:(81) 9 8417-0538]
+        \end{description}
 
-    % \item \textbf{Nome Completo:} Fulano de tal
-    % \begin{description}
-        % \item [Email:] \email{blabla@poli.br}
-        % \item [Endereço:]
-        % \item [Matrícula:]
-        % \item [CPF:]
-        % \item [RG:]
-        % \item [Telefone:]
-        % \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
-    % \end{description}
-
-%     \item \textbf{Nome Completo:} Fulano de tal
-%     \begin{description}
-%         \item [Email:] \email{blabla@poli.br}
-%         \item [Endereço:]
-%         \item [Matrícula:]
-%         \item [CPF:]
-%         \item [RG:]
-%         \item [Telefone:]
-%         \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
-%     \end{description}
-\end{enumerate}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Docentes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Docentes}
 
@@ -243,24 +243,6 @@ Manual G-portugol, Thiago Silva
 Manual G-portugol, Thiago Silva
 Rubens C.B. arquivos modelos e exemplos
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% se necessario %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% troca autor and autor por autor & autor, na bibliografia. O dcu usa "and"
-%\renewcommand{\harvardand}{\&} % troca and pro &. O dcu usa "and"
-
-% Estilos de bibliografia %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \bibliographystyle{abnt-alf} % Estilo alfabético da ABNT. Opção [num] para estilo numérico
-% \bibliographystyle{apalike}
-% \bibliographystyle{dcu} %citacao como (autor and autor, ano). Parece apalike. Rev. Control. Automacao. Use com harvard
-% \bibliographystyle{agsm} % padrao harvard fica (autor & autor ano).
-\bibliographystyle{acm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% arquivo de banco de dados das referências %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% renomear para o número do exercício correto
-% o arquivo de bibliografia pode se chamar qualquer coisa, isso não muda o comando de gerar o PDF.
-% Por exemplo para 'mybiblio.bib', use \bibliography{mybiblio} e os comandos pdflatex e bibtex continuam os mesmos identicos com exN.
 \bibliography{biblio}
 
 \end{document}
